@@ -1,26 +1,25 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import styled from 'styled-components';
 
 function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+    return (
+        <>
+            <StyledHeader>dobby header</StyledHeader>
+            <StyledBody>hello dobby!!</StyledBody>
+        </>
+    );
 }
+
+const StyledBody = styled.div`
+    color: #fff;
+    background: #000;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 800px;
+`;
+
+const StyledHeader = styled.header`
+    display: flex;
+`;
 
 export default App;
